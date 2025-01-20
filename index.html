@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vramework.dev</title>
+  <meta name="description" content="An introduction to Vramework.dev">
+  <meta name="author" content="Yasser Fadl">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Core reveal.js styles -->
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+  <link rel="stylesheet" href="dist/theme/custom.css" id="theme">
+
+  <!-- Code syntax highlighting (optional) -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide -->
+      <section>
+        <a href="https://vramework.dev">
+          <img src="https://vramework.dev/img/vramework.png" alt="Vramework.dev logo"
+            style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
+        </a>
+        <h2 style="margin-bottom: 0;">An Introduction to Vramework.dev</h2>
+        <p><small>Created by <a href="http://github.com/yasserf">Yasser Fadl</a></small></p>
+      </section>
+
+      <!-- Node.js Ecosystem Growth -->
+      <section>
+        <h2>The Node.js Ecosystem Has Grown!</h2>
+        <p>It’s massive now: countless libraries, frameworks, serverless platforms, and hosting providers.</p>
+      </section>
+
+      <!-- Comparison Slide (Approaches) -->
+      <section class="comparison" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+        <h3>Popular Approaches Today*</h3>
+        <div class="comparison-grid">
+          <img class="compare-one compare-icon" data-id="icon-aws" src="/assets/aws.svg" alt="AWS (Serverless)">
+          <img class="compare-one compare-icon" data-id="icon-azure" src="/assets/azure.svg" alt="Azure (Serverless)">
+          <img class="compare-one compare-icon" data-id="icon-cloudflare" src="/assets/cloudflare.svg"
+            alt="Cloudflare (Workers)">
+          <img class="compare-one compare-icon" data-id="icon-express" src="/assets/express.svg"
+            alt="Express (Framework)">
+          <img class="compare-one compare-icon" data-id="icon-fastify" src="/assets/fastify.svg"
+            alt="Fastify (Framework)">
+          <img class="compare-one compare-icon" data-id="icon-uws" src="/assets/uws.png" alt="uWebSockets (Server)">
+          <img class="compare-one compare-icon" data-id="icon-websocket" src="/assets/websocket.png" alt="WebSockets">
+          <img class="compare-one compare-icon" data-id="icon-fastify" src="/assets/nextjs.png"
+            alt="Next.js (Fullstack)">
+          <img class="compare-one compare-icon" data-id="icon-tanstack" src="/assets/tanstack.png"
+            alt="TanStack (Fullstack Tools)">
+          <img class="compare-one compare-icon" data-id="icon-nestjs" src="/assets/nestjs.png" alt="NestJS (Framework)">
+          <img class="compare-one compare-icon" data-id="icon-loopback" src="/assets/loopback.png"
+            alt="LoopBack (Framework)">
+          <img class="compare-one compare-icon" data-id="icon-encore" src="/assets/encore.png"
+            alt="Encore (Serverless)">
+        </div>
+        <small>* and many more ...</small>
+      </section>
+
+      <!-- High-Level Comparison Table -->
+      <section>
+        <h3>A High-Level Comparison</h3>
+        <p style="font-size:0.9em;">(Selected features across common tools on install)</p>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th><img class="table-icon" src="/assets/aws.svg" alt="AWS"></th>
+              <th><img class="table-icon" src="/assets/cloudflare.svg" alt="Cloudflare"></th>
+              <th><img class="table-icon" src="/assets/express.svg" alt="Express"></th>
+              <th><img class="table-icon" src="/assets/uws.png" alt="uWebSockets"></th>
+              <th><img class="table-icon" src="/assets/loopback.png" alt="LoopBack"></th>
+              <th><img class="table-icon" src="/assets/encore.png" alt="Encore"></th>
+              <th><img class="table-icon" src="/assets/nextjs.png" alt="Next.js"></th>
+              <th><img class="table-icon" src="/assets/tanstack.png" alt="TanStack"></th>
+              <th><img class="table-icon" src="/assets/nestjs.png" alt="NestJS"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Serverless</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>Functions</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>Services</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>Permissions</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>Full Stack</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>✅</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>Complex</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>✅</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section data-auto-animate>
+        <h2>Common Pain Points</h2>
+        <section data-auto-animate>
+          <h4>Have you heard any of these before?</h4>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“Can't we just run this one job via Lambda?”</blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“Why is our job processor so under utilised?”</blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“AWS is way too expensive, can we run it on Cloudflare instead?”</blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“We just got a huge new client! But we now also need to support Azure 😨.”</blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“We want to start offering our cloud product on-premise.”</blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“We don't want our backend code mixing with the frontend—but we have to use Next.js.”</blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“Why do I have so many files everywhere!”</blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“Why is it so hard to deploy our WebSockets via serverless?”</blockquote>
+        </section>
+      </section>
+
+      <!-- Introduce Typed Functions / Vramework -->
+      <section>
+        <h2>The Answer Is...</h2>
+        <h1 class="fragment">Typed Functions!</h1>
+        <h3 class="fragment">a.k.a. Vramework</h3>
+      </section>
+
+      <!-- Why Typed Functions / Vramework? -->
+      <section>
+        <h2>Why Vramework?</h2>
+        <p style="font-size:0.95em;">
+          Vramework is built on the idea of <strong>Typed Functions</strong>. It aims to solve pain points by being:
+        </p>
+        <ul>
+          <li class="fragment">Minimal & easy to read</li>
+          <li class="fragment">Portable (AWS, Cloudflare, Express, ... you name it)</li>
+          <li class="fragment">Modular: Functions are individual units</li>
+          <li class="fragment">Promote Serverless design without sacrificing speed</li>
+          <li class="fragment">Fully typed with TypeScript</li>
+        </ul>
+      </section>
+
+      <!-- How Vramework Works (TypeScript compiler) -->
+      <!-- <section>
+        <h2>How It Works Under the Hood</h2>
+        <h3>Compile Time</h3>
+        <p style="font-size:0.95em;">
+          <strong>Vramework leverages the TypeScript compiler</strong> to provide the following:
+        </p>
+        <ul>
+          <li class="fragment">JSON Schemas generation from function types</li>
+          <li class="fragment">OpenAPI documentation</li>
+          <li class="fragment">Lightweight typed fetch, WebSocket, and Next.js wrappers</li>
+          <li class="fragment">Stricter validation at compile-time</li>
+          <li class="fragment">Smaller, smarter builds by analyzing your TS</li>
+        </ul>
+      </section> -->
+
+
+      <!-- How Vramework Works (TypeScript compiler) -->
+      <!-- <section>
+        <h2>How It Works Under the Hood</h2>
+        <h3>Run Time</h3>
+        <p style="font-size:0.95em;">
+          <strong>Vramework then leverages the compiled assets in order to:</strong>
+        </p>
+        <ul>
+          <li class="fragment">Route the functions</li>
+          <li class="fragment">Apply authentication strategies</li>
+          <li class="fragment">Type your data</li>
+          <li class="fragment">Map errors to HTTP codes</li>
+          <li class="fragment">Handle WebSockets in a serverless fashion</li>
+        </ul>
+      </section> -->
+
+      <!-- Capabilities Slide -->
+      <section data-auto-animate>
+        <h2>Key Features</h2>
+        <ul>
+          <li class="fragment">HTTP endpoints</li>
+          <li class="fragment">CronJobs (scheduled tasks)</li>
+          <li class="fragment">WebSockets (deploy anywhere, minimal overhead)</li>
+          <li class="fragment">Services & Auth built-in</li>
+          <li class="fragment">Type-safe from DB to UI</li>
+          <li class="fragment">Protocol-agnostic, so it can adapt to any environment</li>
+        </ul>
+      </section>
+
+      <!-- Code Intro Slide -->
+      <section>
+        <h2>Code Snippets</h2>
+        <p>It's a developer framework after all! Let’s see some examples.</p>
+      </section>
+
+      <!-- A Vramework Function -->
+      <section>
+        <h2>A Vramework Function</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">
+          Typed inputs & outputs ensure type-safety and fewer runtime errors.
+        </p>
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|4|5|6|7-11|12">import type { Talk, Vote } from './types'
+
+export const voteOnTalk: APIFunction&lt;
+  Pick&lt;Talk, 'talkId'> & { vote: Vote }, // Input
+  { message: string }                   // Output
+&gt; = async (services, data, userSession) => {
+  try {
+    await services.talks.addVote(data.talkId, userSession.userId, data.vote)
+  } catch {
+    throw new AlreadyVoted()
+  }
+  return { message: "Thank you for the feedback!" }
+};
+      </code></pre>
+      </section>
+
+      <!-- Services Example -->
+      <section>
+        <h2>Services in Vramework</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">Define singleton and session-based services</p>
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1-11|13-19">export const createSingletonServices: CreateSingletonServices&lt;
+  Config,
+  SingletonServices
+  &gt; = async (config) => {
+  return {
+    config,
+    logger,
+    variablesService,
+    talks: new TalksService()
+  }
+}
+
+export const createSessionServices: CreateSessionServices&lt;
+  SingletonServices,
+  Services,
+  UserSession
+  &gt; = async (services, { http }, session) => {
+  return {}
+}
+      </code></pre>
+      </section>
+
+      <!-- HTTP Example -->
+      <section>
+        <h2>HTTP</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">Wire a function to an HTTP route with auth & permissions</p>
+        <pre><code class="javascript" style="font-size:16px;" data-line-numbers="|1,15|2-3|4|5-9|10-14|17-19">addRoute({
+  method: 'post',
+  route: '/talk/:talkId/vote',
+  func: voteOnTalk,
+  permissions: {
+    isTalkMember: [isTalkMember, isNotPresenter],
+    isAdmin
+  },
+  auth: true,
+  docs: {
+    errors: [NotFoundError],
+    description: 'Vote on a talk',
+    tags: ['talk']
+  }
+})
+
+addErrors([
+  [AlreadyVoted, { status: 409, message: 'User Already Voted' }],
+])
+      </code></pre>
+      </section>
+
+      <!-- Cron Example -->
+      <section>
+        <h2>CronJobs</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">Register scheduled tasks directly in your codebase</p>
+        <pre><code class="javascript" style="font-size:16px;" data-line-numbers="|1-6|8,12|9-11">const sendNewsletter: APIFunctionSessionless&lt;void, void&gt; = async (
+  { database, email: emailService }
+) => {
+  const emails = await database.getUserEmails()
+  await emailService.sendNewsletter(emails)
+}
+
+addScheduledTask({
+  name: 'sendNewsletter',
+  schedule: '*/1 * * * *', // every minute
+  func: sendNewsletter
+})
+      </code></pre>
+      </section>
+
+      <!-- Demo Slide -->
+      <section>
+        <h2>Demo Time 🚀</h2>
+        <p>(Quick demonstration of Vramework in action.)</p>
+      </section>
+
+                  <!-- New Caveats Slide -->
+      <section>
+        <h2>Limitations & Caveats</h2>
+        <h3>Vramework is a function repository, not a server!</h3>
+        <ul>
+          <li>Built primarily to plug into <strong>servers</strong></li>
+          <li>Currently <strong>JSON and primitives</strong> input/output (format support is limited).</li>
+          <li>Not yet fully battle tested in production*</li>
+        </ul>
+        <small style="margin-top: 30px;">*due to large refactor</small>
+      </section>
+
+      <!-- Roadmap -->
+      <section>
+        <h2>Roadmap</h2>
+        <ul>
+          <li>More Users & Contributors 🫣</li>
+          <li>Smarter Services & improved CLI</li>
+          <li>Microservices & RPC calls</li>
+          <li>Queue integrations</li>
+          <li>Enhanced AI Tooling</li>
+        </ul>
+      </section>
+
+      <!-- Recap Slide -->
+      <section>
+        <h2>Recap</h2>
+        <ul>
+          <li class="fragment">Vramework = Typed Functions + Minimal Overhead</li>
+          <li class="fragment">Leverages TS Compiler to remove most boilerplate</li>
+          <li class="fragment">Handles HTTP, Cron, Auth, and more</li>
+          <li class="fragment">Deploy anywhere with full TypeScript coverage</li>
+        </ul>
+      </section>
+
+      <!-- End / Q&A Slide -->
+      <section style="text-align: center;">
+        <h1>THE END</h1>
+        <p>Q & A</p>
+      </section>
+
+      <!-- Last Slide -->
+      <section data-background="/assets/last-slide.webp">
+      </section>
+
+      <!-- WebSocket (Encore) -->
+      <section>
+        <h2>Bonus: WebSockets 👀</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">
+          Sneak peek at how Vramework handles real-time communication without the usual serverless headaches:
+        </p>
+        <pre><code class="javascript" style="font-size:16px;" data-line-numbers="|1-3|5-7|9-11|13-20|26-28|29-39">const onConnect: ChannelConnection&lt;'hello!'> = async (services, channel) => {
+  // On connection (like onOpen)
+}
+
+const onDisconnect: ChannelDisconnection = async (services, channel) => {
+  // On close
+}
+
+const onMessage: ChannelMessage&lt;'hello!', 'hey'> = async (services, channel) => {
+  channel.send('hey')
+}
+
+export const subscribeToLikes: ChannelMessage&lt;
+  { talkId: string; action: 'subscribeToLikes' },
+  { action: string; likes: number }
+&gt; = async (services, channel, { action, talkId }) => {
+  const channelName = services.talks.getChannelName(talkId)
+  await services.eventHub.subscribe(channelName, channel.channelId)
+  return { action, likes: await services.talks.getLikes(talkId) }
+}
+
+addChannel({
+  name: 'talks',
+  route: '/',
+  auth: true,
+  onConnect,
+  onDisconnect,
+  onMessage,
+  onMessageRoute: {
+    action: {
+      subscribeToLikes: {
+        func: subscribeToLikes,
+        permissions: {
+          isTalkMember: [isTalkMember, isNotPresenter],
+          isAdmin
+        },
+      },
+    },
+  },
+})
+      </code></pre>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js scripts -->
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/zoom/zoom.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/search/search.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.configure({ pdfSeparateFragments: false });
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      // Enable auto-animate globally
+      autoAnimate: true,
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+    });
+  </script>
+
+</body>
+
+</html>
