@@ -29,7 +29,8 @@
           <img src="https://vramework.dev/img/vramework.png" alt="Vramework.dev logo"
             style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
         </a>
-        <h2 style="margin-bottom: 0;">An Introduction to Vramework.dev</h2>
+        <h2 style="margin-bottom: 0;">Vramework</h2>
+        <h3>The Framework to Unite Them All</h3>
         <p><small>Created by <a href="http://github.com/yasserf">Yasser Fadl</a></small></p>
       </section>
 
@@ -123,18 +124,6 @@
               <td>✅</td>
             </tr>
             <tr>
-              <td>Permissions</td>
-              <td>❌</td>
-              <td>❌</td>
-              <td>❌</td>
-              <td>❌</td>
-              <td>✅</td>
-              <td>❌</td>
-              <td>❌</td>
-              <td>❌</td>
-              <td>✅</td>
-            </tr>
-            <tr>
               <td>Full Stack</td>
               <td>❌</td>
               <td>❌</td>
@@ -143,20 +132,23 @@
               <td>❌</td>
               <td>❌</td>
               <td>✅</td>
-              <td>❌</td>
               <td>✅</td>
+              <td>❌</td>
             </tr>
             <tr>
-              <td>Complex</td>
-              <td>❌</td>
-              <td>❌</td>
-              <td>❌</td>
-              <td>❌</td>
-              <td>✅</td>
-              <td>❌</td>
+              <td>Simple</td>
               <td>✅</td>
               <td>✅</td>
               <td>✅</td>
+              <td>✅</td>
+
+              <td>❌</td>
+
+              <td>✅</td>
+
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
             </tr>
           </tbody>
         </table>
@@ -165,25 +157,26 @@
       <section data-auto-animate>
         <h2>Common Pain Points</h2>
         <section data-auto-animate>
-          <h4>Have you heard any of these before?</h4>
+          <h4>Have you heard or thought of any of these before?</h4>
         </section>
         <section data-auto-animate>
-          <blockquote>“Can't we just run this one job via Lambda?”</blockquote>
+          <blockquote>“Why can't we run our jobs via Lambda?”</blockquote>
         </section>
         <section data-auto-animate>
           <blockquote>“Why is our job processor so under utilised?”</blockquote>
         </section>
         <section data-auto-animate>
-          <blockquote>“AWS is way too expensive, can we run it on Cloudflare instead?”</blockquote>
+          <blockquote>“AWS is way too expensive, I wish we could save money by running it on Cloudflare instead”
+          </blockquote>
         </section>
         <section data-auto-animate>
-          <blockquote>“We just got a huge new client! But we now also need to support Azure 😨.”</blockquote>
+          <blockquote>“We just landed a huge new client! Just wish they weren't using Azure 😨.”</blockquote>
         </section>
         <section data-auto-animate>
-          <blockquote>“We want to start offering our cloud product on-premise.”</blockquote>
+          <blockquote>“We want to start offering our cloud product to on-premise / enterprise customers.”</blockquote>
         </section>
         <section data-auto-animate>
-          <blockquote>“We don't want our backend code mixing with the frontend—but we have to use Next.js.”</blockquote>
+          <blockquote>“Why are now doing our database queries directly from React code?”</blockquote>
         </section>
         <section data-auto-animate>
           <blockquote>“Why do I have so many files everywhere!”</blockquote>
@@ -202,33 +195,15 @@
 
       <!-- Why Typed Functions / Vramework? -->
       <section>
-        <h2>Why Vramework?</h2>
-        <p style="font-size:0.95em;">
-          Vramework is built on the idea of <strong>Typed Functions</strong>. It aims to solve pain points by being:
-        </p>
-        <ul>
-          <li class="fragment">Minimal & easy to read</li>
-          <li class="fragment">Portable (AWS, Cloudflare, Express, ... you name it)</li>
-          <li class="fragment">Modular (Functions are individual units)</li>
-          <li class="fragment">Promote Serverless design without sacrificing speed</li>
-          <li class="fragment">Fully typed with TypeScript</li>
-        </ul>
+        <h2>Why Typed Functions?</h2>
+        <ol>
+          <li class="fragment">🧩 Modular (Functions are individual units)</li>
+          <li class="fragment">🧳 Portable (AWS, Cloudflare, Express, ...)</li>
+          <li class="fragment">☁️ Serverless design without sacrificing speed</li>
+          <li class="fragment">🧪 Simple to test</li>
+          <li class="fragment">❤️ TypeScript</li>
+        </ol>
       </section>
-
-      <!-- How Vramework Works (TypeScript compiler) -->
-      <section>
-        <h2>How It Works Under the Hood</h2>
-        <p style="font-size:0.95em;">
-          <strong>Vramework leverages the TypeScript compiler</strong> to provide the following:
-        </p>
-        <ul>
-          <li class="fragment">JSON Schemas generation directly from your functions</li>
-          <li class="fragment">OpenAPI documentation</li>
-          <li class="fragment">Lightweight fully typed fetch, WebSocket, and Next.js SDK's</li>
-          <li class="fragment">Smaller, smarter builds by analyzing your TS</li>
-        </ul>
-      </section>
-
 
       <!-- How Vramework Works (TypeScript compiler) -->
       <!-- <section>
@@ -250,12 +225,13 @@
       <section data-auto-animate>
         <h2>Key Features</h2>
         <ul>
-          <li class="fragment">HTTP endpoints</li>
-          <li class="fragment">CronJobs (scheduled tasks)</li>
-          <li class="fragment">WebSockets (deploy anywhere, minimal overhead)</li>
-          <li class="fragment">Services & Auth built-in</li>
-          <li class="fragment">Type-safe from DB to UI</li>
-          <li class="fragment">Protocol-agnostic, so it can adapt to any environment</li>
+          <li>HTTP endpoints</li>
+          <li>Scheduled Tasks (aka Cron Jobs)</li>
+          <li>Channels (aka WebSockets)</li>
+          <li>Services & Auth built-in</li>
+          <li>Type-safe (From DB to UI)</li>
+          <li>Protocol Agnostic</li>
+          <li>and more...</li>
         </ul>
       </section>
 
@@ -284,32 +260,6 @@ export const voteOnTalk: APIFunction&lt;
   }
   return { message: "Thank you for the feedback!" }
 };
-      </code></pre>
-      </section>
-
-      <!-- Services Example -->
-      <section>
-        <h2>Services in Vramework</h2>
-        <p style="font-size:0.9em; margin-bottom:10px;">Define singleton and session-based services</p>
-        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1-11|13-19">export const createSingletonServices: CreateSingletonServices&lt;
-  Config,
-  SingletonServices
-  &gt; = async (config) => {
-  return {
-    config,
-    logger,
-    variablesService,
-    talks: new TalksService()
-  }
-}
-
-export const createSessionServices: CreateSessionServices&lt;
-  SingletonServices,
-  Services,
-  UserSession
-  &gt; = async (services, { http }, session) => {
-  return {}
-}
       </code></pre>
       </section>
 
@@ -358,6 +308,104 @@ addScheduledTask({
       </code></pre>
       </section>
 
+
+      <!-- Services Example -->
+      <section>
+        <h2>Services in Vramework</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">Define singleton and session-based services</p>
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1-16|18-27">const createSingletonServices: CreateSingletonServices&lt;
+  Config,
+  SingletonServices
+&gt; = async (config) => {
+  const jwt = new JoseJWTService&lt;UserSession&gt;(getJWTKeys, logger)
+  const httpSessionService = new VrameworkHTTPSessionService&lt;UserSession&gt;(jwt, {
+    cookieNames: ['session'],
+    getSessionForCookieValue: async (cookieValue: string) => {
+      return await jwt.decodeSession(cookieValue)
+    }
+  })
+  return {
+    config, logger, jwt, httpSessionService,
+    talks: new TalksService()
+  }
+}
+    
+const createSessionServices: CreateSessionServices&lt;
+  SingletonServices,
+  Services,
+  UserSession
+&gt; = async (services, { http }, session) => {
+  const temporaryFileService = new TemporaryFileService()
+  return {
+    temporaryFileService
+  }
+}
+            </code></pre>
+      </section>
+
+
+      <!-- How Vramework Works (TypeScript compiler) -->
+      <section>
+        <h2>How It Works Under the Hood</h2>
+        <p style="font-size:0.95em;">
+          <strong>By leveraging the TypeScript compiler</strong>
+        </p>
+        <ul>
+          <li class="fragment">JSON Schemas generation directly from your functions</li>
+          <li class="fragment">OpenAPI documentation</li>
+          <li class="fragment">Lightweight fully typed fetch, WebSocket, and Next.js SDK's</li>
+          <li class="fragment">Smaller, smarter builds by analyzing your TS</li>
+        </ul>
+      </section>
+
+      <!-- Services Example -->
+      <section>
+        <h2>Deploying Via Express</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">How would we deploy this via express?</p>
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1-16|18-27">import '../.vramework/vramework-bootstrap'
+// Create Config and Services         
+const config = await getConfig()
+const singletonServices = await createSingletonServices(config)
+// Create a scheduler for CronJobs
+const scheduler = new VrameworkTaskScheduler(singletonServices)
+scheduler.startAll()
+// Create an Express app
+const app = new Express()
+app.use(vrameworkMiddleware(this.singletonServices, createSessionServices))
+app.listen(config.port, config.hostname)
+            </code></pre>
+      </section>
+
+      <!-- Services Example -->
+      <section>
+        <h2>Deploying Via AWS</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">How would we use this via AWS?</p>
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-10|11-15|16-23">import '../.vramework/vramework-bootstrap'
+// Create Config and Services once on load
+let singletonServices
+const coldStart = async () => {
+  if (!singletonServices) {
+    const config = await getConfig()
+    const singletonServices = await createSingletonServices(config)
+    return singletonServices
+  }
+}
+// Respond to HTTP
+export const handler = async (event: APIGatewayProxyEvent) => {
+  const singletonServices = await coldStart()
+  return await corslessHTTP(event, singletonServices, createSessionServices)
+}
+// Run a cron job
+export const expireTodos: ScheduledHandler = async (event) => {
+  const singletonServices = await coldStart()
+  await runScheduledTask({
+    name: 'expireTodos',
+    singletonServices,
+  })
+}
+                  </code></pre>
+      </section>
+
       <!-- Demo Slide -->
       <section>
         <h2>Demo Time 🚀</h2>
@@ -401,7 +449,8 @@ addScheduledTask({
 
       <!-- End / Q&A Slide -->
       <section>
-        <div style="text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 100px;">
+        <div
+          style="text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 100px;">
           <div>
             <h1>THE END</h1>
             <p>Q & A</p>
