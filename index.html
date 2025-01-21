@@ -350,12 +350,35 @@ const createSessionServices: CreateSessionServices&lt;
         <p style="font-size:0.95em;">
           <strong>By leveraging the TypeScript compiler</strong>
         </p>
-        <ul>
-          <li class="fragment">JSON Schemas generation directly from your functions</li>
-          <li class="fragment">OpenAPI documentation</li>
-          <li class="fragment">Lightweight fully typed fetch, WebSocket, and Next.js SDK's</li>
-          <li class="fragment">Smaller, smarter builds by analyzing your TS</li>
-        </ul>
+        <div class="vramework-inner-workings">
+          <div class="function-layer">
+            <div class="functions">
+              <div class="function">addTalk</div>
+              <div class="function">sendNewsletter</div>
+            </div>
+            <div class="services">
+              <div class="service">talk</div>
+              <div class="service">httpSession</div>
+              <div class="service">jwt</div>
+            </div>
+          </div>
+          <div class="cli-layer">
+            <img src="/assets/aws.svg" alt="AWS">
+            <img src="/assets/cloudflare.svg" alt="Cloudflare">
+            <img src="/assets/express.svg" alt="Express">
+            <img src="/assets/uws.png" alt="uWebSockets">
+            <img src="/assets/nextjs.png" alt="Next.js">
+          </div>
+          <div class="plugin-layer">
+            <img src="/assets/aws.svg" alt="AWS">
+            <img src="/assets/cloudflare.svg" alt="Cloudflare">
+            <img src="/assets/express.svg" alt="Express">
+            <img src="/assets/uws.png" alt="uWebSockets">
+            <img src="/assets/nextjs.png" alt="Next.js">
+            <img src="/assets/fastify.svg" alt="Fastify (Framework)">
+            <img src="/assets/websocket.png" alt="Fastify (Framework)">
+          </div>
+        </div>
       </section>
 
       <!-- Services Example -->

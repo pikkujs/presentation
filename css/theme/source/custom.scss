@@ -95,7 +95,7 @@
   padding: 20px;
   width: 300px;
   height: 300px;
-  
+
   .logic-layer {
     display: flex;
     flex-direction: column;
@@ -120,4 +120,128 @@
   background-color: white;
   padding: 5px;
   background-size: contain;
+}
+
+.vramework-inner-workings {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  gap: 5px;
+  width: fit-content;
+
+  > * {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 5px;
+    border: 1px dashed #ccc;
+    position: relative;
+
+  }
+
+  .function-layer {
+    &::after {
+      content: "Vramework"
+    }
+    padding: 10px 100px;
+    >* {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 30px 10px 0px 10px;
+    }
+
+    >*>* {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      position: absolute;
+      right: 0;
+    }
+
+    .functions {
+      position: relative;
+      height: fit-content;
+
+      .function {
+        position: relative;
+      }
+
+      .function::after {
+        content: "function";
+        border-style: solid;
+      }
+    }
+
+    .services {
+      position: relative;
+      height: fit-content;
+
+      .service {
+        position: relative;
+      }
+
+      .service::after {
+        content: "Service";
+        border-style: solid;
+      }
+    }
+
+    .functions::after {
+      content: "Functions";
+      border-style: solid;
+    }
+
+    .services::after {
+      content: "Services";
+      border-style: solid;
+    }
+  }
+
+  .cli-layer {
+    justify-content: space-around;
+    &::after {
+      content: "CLI"
+    }
+  }
+
+  .plugin-layer {
+    justify-content: space-around;
+    &::after {
+      content: "Plugins";
+      border-style: solid;
+    }
+  }
+
+  .function-layer::after,
+  .cli-layer::after,
+  .plugin-layer::after,
+  .functions::after,
+  .services::after,
+  .service::after,
+  .function::after {
+    position: absolute;
+    border-radius: 0 0 0 5px;
+    padding: 5px;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-color: #ccc;
+    border-style: dashed;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 5px;
+    background-color: white;
+  }
 }
