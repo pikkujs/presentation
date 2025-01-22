@@ -120,17 +120,17 @@
   color: var(--vramework-title-text);
 }
 .vramework-inner-workings .function-layer {
-  padding: 30px 10px 10px 10px;
+  padding: 20px 100px 10px 10px;
 }
 .vramework-inner-workings .function-layer .functions, .vramework-inner-workings .function-layer .services, .vramework-inner-workings .function-layer .wiring {
-  padding: 40px 10px 0 10px;
+  padding: 30px 10px 0 10px;
   border-radius: 5px;
 }
 .vramework-inner-workings .function-layer .function, .vramework-inner-workings .function-layer .service, .vramework-inner-workings .function-layer .wire {
   border-radius: 5px;
   background-color: var(--vramework-background);
   border: 1px solid var(--vramework-border);
-  padding: 10px 50px 10px 10px;
+  padding: 5px 50px 5px 10px;
   margin-bottom: 10px;
   position: relative;
   color: var(--vramework-text);
@@ -140,9 +140,6 @@
 .vramework-inner-workings .function-layer .functions {
   position: relative;
 }
-.vramework-inner-workings .function-layer .functions .function::after {
-  content: "Function";
-}
 .vramework-inner-workings .function-layer .wiring {
   position: relative;
 }
@@ -151,9 +148,6 @@
   height: fit-content;
   background-color: var(--vramework-background);
   border: 1px solid var(--vramework-border);
-}
-.vramework-inner-workings .function-layer .services .service::after {
-  content: "Service";
 }
 .vramework-inner-workings .function-layer::after {
   content: "Your (Typed) Logic";
@@ -197,6 +191,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
   margin: var(--r-block-margin) 0;
   font-size: 20px;
 }

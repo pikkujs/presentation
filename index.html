@@ -37,7 +37,6 @@
       <!-- Node.js Ecosystem Growth -->
       <section>
         <h2>The Node.js Ecosystem Has Grown!</h2>
-        <p>It’s massive now: countless libraries, frameworks, serverless platforms, and hosting providers.</p>
       </section>
 
       <!-- Comparison Slide (Approaches) -->
@@ -45,45 +44,46 @@
         <h3>Popular Approaches Today*</h3>
         <div class="comparison-grid">
           <img class="compare-one compare-icon" data-id="icon-aws" src="/assets/aws.svg" alt="AWS (Serverless)">
-          <img class="compare-one compare-icon" data-id="icon-azure" src="/assets/azure.svg" alt="Azure (Serverless)">
           <img class="compare-one compare-icon" data-id="icon-cloudflare" src="/assets/cloudflare.svg"
             alt="Cloudflare (Workers)">
           <img class="compare-one compare-icon" data-id="icon-express" src="/assets/express.svg"
             alt="Express (Framework)">
-          <img class="compare-one compare-icon" data-id="icon-fastify" src="/assets/fastify.svg"
-            alt="Fastify (Framework)">
           <img class="compare-one compare-icon" data-id="icon-uws" src="/assets/uws.png" alt="uWebSockets (Server)">
-          <img class="compare-one compare-icon" data-id="icon-websocket" src="/assets/websocket.png" alt="WebSockets">
+          <img class="compare-one compare-icon" data-id="icon-loopback" src="/assets/loopback.png"
+          alt="LoopBack (Framework)">
+          <img class="compare-one compare-icon" data-id="icon-encore" src="/assets/encore.png"
+          alt="Encore (Serverless)">
           <img class="compare-one compare-icon" data-id="icon-fastify" src="/assets/nextjs.png"
             alt="Next.js (Fullstack)">
-          <img class="compare-one compare-icon" data-id="icon-tanstack" src="/assets/tanstack.png"
+            <img class="compare-one compare-icon" data-id="icon-tanstack" src="/assets/tanstack.png"
             alt="TanStack (Fullstack Tools)">
           <img class="compare-one compare-icon" data-id="icon-nestjs" src="/assets/nestjs.png" alt="NestJS (Framework)">
-          <img class="compare-one compare-icon" data-id="icon-loopback" src="/assets/loopback.png"
-            alt="LoopBack (Framework)">
-          <img class="compare-one compare-icon" data-id="icon-encore" src="/assets/encore.png"
-            alt="Encore (Serverless)">
+          <img class="compare-one compare-icon" data-id="icon-azure" src="/assets/azure.svg" alt="Azure (Serverless)">
+          <img class="compare-one compare-icon" data-id="icon-fastify" src="/assets/fastify.svg"
+          alt="Fastify (Framework)">
+          <img class="compare-one compare-icon" data-id="icon-websocket" src="/assets/websocket.png" alt="WebSockets">
+
         </div>
         <small>* and many more ...</small>
       </section>
 
       <!-- High-Level Comparison Table -->
-      <section>
+      <section data-auto-animate>
         <h3>A High-Level Comparison</h3>
         <p style="font-size:0.9em;">(Selected features across on a standard project)</p>
         <table>
           <thead>
             <tr>
               <th></th>
-              <th><img class="table-icon" src="/assets/aws.svg" alt="AWS"></th>
-              <th><img class="table-icon" src="/assets/cloudflare.svg" alt="Cloudflare"></th>
-              <th><img class="table-icon" src="/assets/express.svg" alt="Express"></th>
-              <th><img class="table-icon" src="/assets/uws.png" alt="uWebSockets"></th>
-              <th><img class="table-icon" src="/assets/loopback.png" alt="LoopBack"></th>
-              <th><img class="table-icon" src="/assets/encore.png" alt="Encore"></th>
-              <th><img class="table-icon" src="/assets/nextjs.png" alt="Next.js"></th>
-              <th><img class="table-icon" src="/assets/tanstack.png" alt="TanStack"></th>
-              <th><img class="table-icon" src="/assets/nestjs.png" alt="NestJS"></th>
+              <th><img data-id="icon-aws" class="table-icon" src="/assets/aws.svg" alt="AWS"></th>
+              <th><img data-id="icon-cloudflare" class="table-icon" src="/assets/cloudflare.svg" alt="Cloudflare"></th>
+              <th><img data-id="icon-express" class="table-icon" src="/assets/express.svg" alt="Express"></th>
+              <th><img data-id="icon-uws" class="table-icon" src="/assets/uws.png" alt="uWebSockets"></th>
+              <th><img data-id="icon-loopback" class="table-icon" src="/assets/loopback.png" alt="LoopBack"></th>
+              <th><img data-id="icon-encore" class="table-icon" src="/assets/encore.png" alt="Encore"></th>
+              <th><img data-id="icon-nextjs" class="table-icon" src="/assets/nextjs.png" alt="Next.js"></th>
+              <th><img data-id="icon-tanstack" lass="table-icon" src="/assets/tanstack.png" alt="TanStack"></th>
+              <th><img data-id="icon-nestjs" class="table-icon" src="/assets/nestjs.png" alt="NestJS"></th>
             </tr>
           </thead>
           <tbody>
@@ -158,16 +158,14 @@
         <h2>Common Pain Points</h2>
         <section data-auto-animate>
           <h4>Have you heard or thought of any of these before?</h4>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“Why can't we run our jobs via Lambda?”</blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“Why is our job processor so under utilised?”</blockquote>
+          <small>Feel free to replace X with Y</small>
         </section>
         <section data-auto-animate>
           <blockquote>“AWS is way too expensive, I wish we could save money by running it on Cloudflare instead”
           </blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“Why is our docker job processor so under utilised?”</blockquote>
         </section>
         <section data-auto-animate>
           <blockquote>“We just landed a huge new client! Just wish they weren't using Azure 😨.”</blockquote>
@@ -176,19 +174,30 @@
           <blockquote>“We want to start offering our cloud product to on-premise / enterprise customers.”</blockquote>
         </section>
         <section data-auto-animate>
-          <blockquote>“Why are now doing our database queries directly from React code?”</blockquote>
+          <blockquote>“Why are we now doing our database queries directly from React code?”</blockquote>
         </section>
         <section data-auto-animate>
-          <blockquote>“Why do I have so many files everywhere!”</blockquote>
+          <blockquote>“ARGGGH, what is all this boilerplate code!”</blockquote>
         </section>
         <section data-auto-animate>
           <blockquote>“Why is it so hard to deploy our WebSockets via serverless?”</blockquote>
         </section>
+        <section data-auto-animate>
+          <blockquote>“Why is my function startup time so slow!”</blockquote>
+        </section>
+        <section data-auto-animate>
+          <blockquote>“What about the 🌍?”</blockquote>
+        </section>
+      </section>
+
+      <section>
+        <h2>The Problem</h2>
+        <h1>Costs and Lock-in</h1>
       </section>
 
       <!-- Introduce Typed Functions / Vramework -->
       <section>
-        <h2>The Answer Is...</h2>
+        <h2>My Solution Is...</h2>
         <h1 class="fragment">Typed Functions!</h1>
         <h3 class="fragment">a.k.a. Vramework</h3>
       </section>
@@ -197,11 +206,11 @@
       <section>
         <h2>Why Typed Functions?</h2>
         <ol>
-          <li class="fragment">🧩 Modular (Functions are individual units)</li>
-          <li class="fragment">🧳 Portable (AWS, Cloudflare, Express, ...)</li>
-          <li class="fragment">☁️ Serverless design without sacrificing speed</li>
-          <li class="fragment">🧪 Simple to test</li>
-          <li class="fragment">❤️ TypeScript</li>
+          <li>🧩 Modular (Functions are individual units)</li>
+          <li>🧳 Portable (AWS, Cloudflare, Express, ...)</li>
+          <li>☁️ Serverless design (without sacrificing speed)</li>
+          <li>🧪 Simple to test</li>
+          <li>❤️ TypeScript</li>
         </ol>
       </section>
 
@@ -209,12 +218,12 @@
       <section data-auto-animate>
         <h2>Key Features</h2>
         <ul>
-          <li>HTTP endpoints</li>
-          <li>Scheduled Tasks (aka Cron Jobs)</li>
-          <li>Channels (aka WebSockets)</li>
-          <li>Services & Auth built-in</li>
-          <li>Type-safe (From DB to UI)</li>
           <li>Protocol Agnostic</li>
+          <li>Services & Auth built-in</li>
+          <li>HTTP / Scheduled Tasks / Websockets</li>
+          <li>Type-safe (From DB to UI)</li>
+          <li>Runtime schema validation</li>
+          <li>OpenAPI docs, typed plugins, typed fetch</li>
           <li>and more...</li>
         </ul>
       </section>
@@ -261,7 +270,7 @@ export const voteOnTalk: APIFunction&lt;
   },
   auth: true,
   docs: {
-    errors: [NotFoundError],
+    errors: [AlreadyVotedError],
     description: 'Vote on a talk',
     tags: ['talk']
   }
@@ -362,24 +371,28 @@ const createSessionServices: CreateSessionServices&lt;
               <span>Schemas</span>
             </div>
             <div class="file-icon">
-              <img src="/assets/typescript-file.png"  alt="Typescript File">
-              <span>CronJob</span>
+              <img src="/assets/typescript-file.png" alt="Typescript File">
+              <span>Schedules</span>
             </div>
             <div class="file-icon">
-              <img src="/assets/typescript-file.png"  alt="Typescript File">
+              <img src="/assets/typescript-file.png" alt="Typescript File">
+              <span>Channels</span>
+            </div>
+            <div class="file-icon">
+              <img src="/assets/typescript-file.png" alt="Typescript File">
               <span>NextJS</span>
             </div>
             <div class="file-icon">
               <img src="/assets/typescript-file.png" alt="Typescript File">
-              <span>Fetch</span>
+              <span>TS Fetch</span>
             </div>
             <div class="file-icon">
               <img src="/assets/typescript-file.png" alt="Typescript File">
+              <span>TS WS</span>
+            </div>
+            <div class="file-icon">
+              <img src="/assets/json-file.png" alt="JSON File">
               <span>OpenAPI</span>
-            </div>
-            <div class="file-icon">
-              <img src="/assets/typescript-file.png" alt="Typescript File">
-              <span>etc...</span>
             </div>
           </div>
           <div class="top-layer">
@@ -411,8 +424,8 @@ const createSessionServices: CreateSessionServices&lt;
               <img src="/assets/express.svg" alt="Express">
               <img src="/assets/uws.png" alt="uWebSockets">
               <img src="/assets/nextjs.png" alt="Next.js">
-              <img src="/assets/fastify.svg" alt="Fastify (Framework)">
-              <img src="/assets/websocket.png" alt="Fastify (Framework)">
+              <img src="/assets/fastify.svg" alt="Fastify">
+              <img src="/assets/websocket.png" alt="Websocket">
             </div>
           </div>
         </div>
@@ -420,9 +433,24 @@ const createSessionServices: CreateSessionServices&lt;
 
       <!-- Services Example -->
       <section>
+        <h2>The CLI</h2>
+        <p style="font-size:0.9em; margin-bottom:10px;">npx @vramework/cli</p>
+        <pre><code class="json" style="font-size: 16px;">{
+  // The project config file
+  "tsconfig": "./tsconfig.json",
+  // Where inspector should look for functions & services
+  "routeDirectories": ["packages/functions/src"],
+  // Where all the generated files go
+  "outDir": "packages/functions/.vramework"
+}</code></pre>
+        <small>vramework.config.json</small>
+      </section>
+
+      <!-- Services Example -->
+      <section>
         <h2>Deploying Via Express</h2>
         <p style="font-size:0.9em; margin-bottom:10px;">How would we deploy this via express?</p>
-        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1-16|18-27">import '../.vramework/vramework-bootstrap'
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-4|5-7|8-11">import '../.vramework/vramework-bootstrap'
 // Create Config and Services         
 const config = await getConfig()
 const singletonServices = await createSingletonServices(config)
@@ -487,41 +515,53 @@ export const expireTodos: ScheduledHandler = async (event) => {
       <!-- Roadmap -->
       <section>
         <h2>Roadmap</h2>
-        <ul>
-          <li>More Users & Contributors 🫣</li>
-          <li>Smarter Services via Inspector</li>
-          <li>Microservices & RPC calls</li>
-          <li>Queue integrations</li>
-          <li>Enhanced AI Tooling</li>
-        </ul>
+        <ol>
+          <li>🔎 Validate the problem space</li>
+          <li>❤️ Build a community</li>
+          <li>🤖 AI Tooling</li>
+          <li>💡 Smarter Inspector</li>
+          <li>🔬 Microservices</li>
+        </ol>
       </section>
 
       <!-- Recap Slide -->
       <section>
-        <h2>Recap</h2>
-        <ul>
-          <li class="fragment">Vramework = Typed Functions + Minimal Overhead</li>
-          <li class="fragment">Leverages TS Compiler to remove most boilerplate</li>
-          <li class="fragment">Handles HTTP, Cron, Auth, and more</li>
-          <li class="fragment">Deploy anywhere with full TypeScript coverage</li>
+        <h4>In summary...</h4>
+        <h3>Vramework = Typed Functions + Minimal Overhead</h3>
+        <ul class="fragment">
+          <li>Leverages TS Compiler to remove almost all boilerplate</li>
+          <li>Handles HTTP, Cron, Auth, and more</li>
+          <li>Loads of generated typescript helpers</li>
+          <li>Deploy anywhere with full TypeScript coverage</li>
         </ul>
       </section>
 
       <!-- End / Q&A Slide -->
-      <section>
-        <div
-          style="text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 100px;">
-          <div>
-            <h1>THE END</h1>
-            <p>Q & A</p>
+      <section class="stretch">
+        <div style="display: flex; flex-direction: column; gap: 50px; justify-content: center; align-items: center;">
+          <div
+            style="text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 100px;">
+            <div>
+              <h1>THE END</h1>
+              <p>Q & A</p>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <a href="https://qr-creator.com/" target="_blank" style="cursor:default;"><img
+                  src="https://qr-api.quel.jp/v1/?size=7&data=https%3A%2F%2Fforms.gle%2FAPJ1PdWHpUVmmcuB9"
+                  alt="QR Code" /></a>
+              <a href="https://forms.gle/APJ1PdWHpUVmmcuB9">Feedback pweez! 🐱</a>
+            </div>
           </div>
-          <div style="display: flex; flex-direction: column;">
-            <a href="https://qr-creator.com/" target="_blank" style="cursor:default;"><img
-                src="https://qr-api.quel.jp/v1/?size=7&data=https%3A%2F%2Fforms.gle%2FAPJ1PdWHpUVmmcuB9"
-                alt="QR Code" /></a>
-            <a href="https://forms.gle/APJ1PdWHpUVmmcuB9">Feedback pweez! 🐱</a>
+          <div style="display: flex; flex-direction: row; gap: 20px; font-size: 30px;">
+            <a href="https://vramework.dev">
+              <img src="https://vramework.dev/img/vramework.png" alt="Vramework.dev logo"
+                style="height: 90px; margin: 0 auto 4rem auto; background: transparent;">
+            </a>
+            <div>
+              <a href="https://vramework.dev">https://vramework.dev</a>
+              <div href="https://github.com/vramework/vramework">Github + ⭐️ = 🎉</div>
+            </div>
           </div>
-          <small><a href="https://www.flaticon.com/free-icons/json" title="json icons">Icons by yoyonpujiono@Flaticon</a></small>
         </div>
       </section>
 
