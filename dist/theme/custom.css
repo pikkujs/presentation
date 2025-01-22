@@ -1,6 +1,10 @@
 :root {
-  --r-comparison-one: red;
-  --r-comparison-two: yellow;
+  --r-comparison-one: rgb(255, 0, 0);
+  --r-comparison-two: rgb(255, 255, 0);
+  --vramework-background: black;
+  --vramework-border: white;
+  --vramework-title-text: black;
+  --vramework-text: white;
 }
 
 .comparison .comparison-grid {
@@ -65,33 +69,6 @@
   border-color: var(--r-comparison-two);
 }
 
-.vramework-layer {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  gap: 20px;
-  border: 2px dashed #ccc;
-  padding: 20px;
-  width: 300px;
-  height: 300px;
-}
-.vramework-layer .logic-layer {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  border: 2px dashed #ccc;
-  width: 125px;
-  height: 125px;
-  padding: 20px 50px;
-  border-radius: 12px;
-}
-.vramework-layer .logic-layer img {
-  width: 50px;
-  height: 50px;
-}
-
 .table-icon {
   width: 60px;
   border-radius: 100%;
@@ -106,86 +83,27 @@
   position: relative;
   gap: 5px;
   width: fit-content;
+  margin: auto;
 }
-.vramework-inner-workings > * {
+.vramework-inner-workings .layer {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
   border-radius: 5px;
-  border: 1px dashed #ccc;
   position: relative;
-}
-.vramework-inner-workings .function-layer {
-  padding: 10px 100px;
-}
-.vramework-inner-workings .function-layer::after {
-  content: "Vramework";
-}
-.vramework-inner-workings .function-layer > * {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 30px 10px 0px 10px;
-}
-.vramework-inner-workings .function-layer > * > * {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-}
-.vramework-inner-workings .function-layer .title {
-  position: absolute;
-  right: 0;
-}
-.vramework-inner-workings .function-layer .functions {
-  position: relative;
-  height: fit-content;
-}
-.vramework-inner-workings .function-layer .functions .function {
-  position: relative;
-}
-.vramework-inner-workings .function-layer .functions .function::after {
-  content: "function";
-  border-style: solid;
-}
-.vramework-inner-workings .function-layer .services {
-  position: relative;
-  height: fit-content;
-}
-.vramework-inner-workings .function-layer .services .service {
-  position: relative;
-}
-.vramework-inner-workings .function-layer .services .service::after {
-  content: "Service";
-  border-style: solid;
-}
-.vramework-inner-workings .function-layer .functions::after {
-  content: "Functions";
-  border-style: solid;
-}
-.vramework-inner-workings .function-layer .services::after {
-  content: "Services";
-  border-style: solid;
-}
-.vramework-inner-workings .cli-layer {
   justify-content: space-around;
+  border: 1px solid var(--vramework-border);
 }
-.vramework-inner-workings .cli-layer::after {
-  content: "CLI";
+.vramework-inner-workings .top-layer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
-.vramework-inner-workings .plugin-layer {
-  justify-content: space-around;
+.vramework-inner-workings .functions, .vramework-inner-workings .wiring, .vramework-inner-workings .services, .vramework-inner-workings .function, .vramework-inner-workings .service, .vramework-inner-workings .cli-layer, .vramework-inner-workings .plugin-layer, .vramework-inner-workings .function-layer, .vramework-inner-workings .core-layer {
+  background-color: var(--vramework-background);
+  border: 1px solid var(--vramework-border);
 }
-.vramework-inner-workings .plugin-layer::after {
-  content: "Plugins";
-  border-style: solid;
-}
-.vramework-inner-workings .function-layer::after,
-.vramework-inner-workings .cli-layer::after,
-.vramework-inner-workings .plugin-layer::after,
-.vramework-inner-workings .functions::after,
-.vramework-inner-workings .services::after,
-.vramework-inner-workings .service::after,
-.vramework-inner-workings .function::after {
+.vramework-inner-workings .functions::after, .vramework-inner-workings .wiring::after, .vramework-inner-workings .services::after, .vramework-inner-workings .function::after, .vramework-inner-workings .service::after, .vramework-inner-workings .cli-layer::after, .vramework-inner-workings .plugin-layer::after, .vramework-inner-workings .function-layer::after, .vramework-inner-workings .core-layer::after {
   position: absolute;
   border-radius: 0 0 0 5px;
   padding: 5px;
@@ -196,8 +114,77 @@
   border-right: 0;
   border-bottom: 1px;
   border-left: 1px;
-  border-color: #ccc;
-  border-style: dashed;
+  border-style: solid;
+  background-color: var(--vramework-border);
+  border-color: var(--vramework-border);
+  color: var(--vramework-title-text);
+}
+.vramework-inner-workings .function-layer {
+  padding: 30px 10px 10px 10px;
+}
+.vramework-inner-workings .function-layer .functions, .vramework-inner-workings .function-layer .services, .vramework-inner-workings .function-layer .wiring {
+  padding: 40px 10px 0 10px;
+  border-radius: 5px;
+}
+.vramework-inner-workings .function-layer .function, .vramework-inner-workings .function-layer .service, .vramework-inner-workings .function-layer .wire {
+  border-radius: 5px;
+  background-color: var(--vramework-background);
+  border: 1px solid var(--vramework-border);
+  padding: 10px 50px 10px 10px;
+  margin-bottom: 10px;
+  position: relative;
+  color: var(--vramework-text);
+  font-size: 20px;
+  text-align: left;
+}
+.vramework-inner-workings .function-layer .functions {
+  position: relative;
+}
+.vramework-inner-workings .function-layer .functions .function::after {
+  content: "Function";
+}
+.vramework-inner-workings .function-layer .wiring {
+  position: relative;
+}
+.vramework-inner-workings .function-layer .services {
+  position: relative;
+  height: fit-content;
+  background-color: var(--vramework-background);
+  border: 1px solid var(--vramework-border);
+}
+.vramework-inner-workings .function-layer .services .service::after {
+  content: "Service";
+}
+.vramework-inner-workings .function-layer::after {
+  content: "Your (Typed) Logic";
+}
+.vramework-inner-workings .function-layer .functions::after {
+  content: "Functions";
+}
+.vramework-inner-workings .function-layer .services::after {
+  content: "Services";
+}
+.vramework-inner-workings .function-layer .wiring::after {
+  content: "Wiring";
+}
+.vramework-inner-workings .cli-layer {
+  padding: 0 10px;
+}
+.vramework-inner-workings .cli-layer::after {
+  content: "npx @vramework/cli (compile time)";
+}
+.vramework-inner-workings .core-layer {
+  padding: 0 10px;
+}
+.vramework-inner-workings .core-layer::after {
+  content: "@vramework/core (runtime)";
+}
+.vramework-inner-workings .plugin-layer {
+  padding: 0 10px;
+  align-items: center;
+}
+.vramework-inner-workings .plugin-layer::after {
+  content: "Plugins (@vramework/aws, @vramework/express-middleware, @vramework/cloudflare, ...)";
 }
 .vramework-inner-workings img {
   width: 50px;
@@ -205,4 +192,14 @@
   border-radius: 100%;
   padding: 5px;
   background-color: white;
+}
+.vramework-inner-workings .file-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--r-block-margin) 0;
+  font-size: 20px;
+}
+.vramework-inner-workings .file-icon img {
+  margin: 0;
 }

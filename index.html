@@ -205,22 +205,6 @@
         </ol>
       </section>
 
-      <!-- How Vramework Works (TypeScript compiler) -->
-      <!-- <section>
-        <h2>How It Works Under the Hood</h2>
-        <h3>Run Time</h3>
-        <p style="font-size:0.95em;">
-          <strong>Vramework then leverages the compiled assets in order to:</strong>
-        </p>
-        <ul>
-          <li class="fragment">Route the functions</li>
-          <li class="fragment">Apply authentication strategies</li>
-          <li class="fragment">Type your data</li>
-          <li class="fragment">Map errors to HTTP codes</li>
-          <li class="fragment">Handle WebSockets in a serverless fashion</li>
-        </ul>
-      </section> -->
-
       <!-- Capabilities Slide -->
       <section data-auto-animate>
         <h2>Key Features</h2>
@@ -350,33 +334,86 @@ const createSessionServices: CreateSessionServices&lt;
         <p style="font-size:0.95em;">
           <strong>By leveraging the TypeScript compiler</strong>
         </p>
-        <div class="vramework-inner-workings">
-          <div class="function-layer">
-            <div class="functions">
-              <div class="function">addTalk</div>
-              <div class="function">sendNewsletter</div>
-            </div>
+        <div class="layer vramework-inner-workings">
+          <div class="fragment layer function-layer">
             <div class="services">
               <div class="service">talk</div>
               <div class="service">httpSession</div>
               <div class="service">jwt</div>
             </div>
+            <div class="functions">
+              <div class="function">addTalk</div>
+              <div class="function">sendNewsletter</div>
+              <div class="function">getTalks</div>
+            </div>
+            <div class="wiring">
+              <div class="wire">HTTP</div>
+              <div class="wire">Cron Jobs</div>
+              <div class="wire">WebSockets</div>
+            </div>
           </div>
-          <div class="cli-layer">
-            <img src="/assets/aws.svg" alt="AWS">
-            <img src="/assets/cloudflare.svg" alt="Cloudflare">
-            <img src="/assets/express.svg" alt="Express">
-            <img src="/assets/uws.png" alt="uWebSockets">
-            <img src="/assets/nextjs.png" alt="Next.js">
+          <div class="fragment layer cli-layer">
+            <div class="file-icon">
+              <img src="/assets/typescript-file.png" alt="Typescript File">
+              <span>HTTP</span>
+            </div>
+            <div class="file-icon">
+              <img src="/assets/json-file.png" alt="JSON File">
+              <span>Schemas</span>
+            </div>
+            <div class="file-icon">
+              <img src="/assets/typescript-file.png"  alt="Typescript File">
+              <span>CronJob</span>
+            </div>
+            <div class="file-icon">
+              <img src="/assets/typescript-file.png"  alt="Typescript File">
+              <span>NextJS</span>
+            </div>
+            <div class="file-icon">
+              <img src="/assets/typescript-file.png" alt="Typescript File">
+              <span>Fetch</span>
+            </div>
+            <div class="file-icon">
+              <img src="/assets/typescript-file.png" alt="Typescript File">
+              <span>OpenAPI</span>
+            </div>
+            <div class="file-icon">
+              <img src="/assets/typescript-file.png" alt="Typescript File">
+              <span>etc...</span>
+            </div>
           </div>
-          <div class="plugin-layer">
-            <img src="/assets/aws.svg" alt="AWS">
-            <img src="/assets/cloudflare.svg" alt="Cloudflare">
-            <img src="/assets/express.svg" alt="Express">
-            <img src="/assets/uws.png" alt="uWebSockets">
-            <img src="/assets/nextjs.png" alt="Next.js">
-            <img src="/assets/fastify.svg" alt="Fastify (Framework)">
-            <img src="/assets/websocket.png" alt="Fastify (Framework)">
+          <div class="top-layer">
+            <div class="fragment layer core-layer">
+              <div class="file-icon">
+                <img src="/assets/typescript-file.png" alt="Typescript File">
+                <span>HTTP</span>
+              </div>
+              <div class="file-icon">
+                <img src="/assets/typescript-file.png" alt="Typescript File">
+                <span>Channel</span>
+              </div>
+              <div class="file-icon">
+                <img src="/assets/typescript-file.png" alt="Typescript File">
+                <span>Schedule</span>
+              </div>
+              <div class="file-icon">
+                <img src="/assets/typescript-file.png" alt="Typescript File">
+                <span>Auth</span>
+              </div>
+              <div class="file-icon">
+                <img src="/assets/typescript-file.png" alt="Typescript File">
+                <span>etc...</span>
+              </div>
+            </div>
+            <div class="fragment layer plugin-layer">
+              <img src="/assets/aws.svg" alt="AWS">
+              <img src="/assets/cloudflare.svg" alt="Cloudflare">
+              <img src="/assets/express.svg" alt="Express">
+              <img src="/assets/uws.png" alt="uWebSockets">
+              <img src="/assets/nextjs.png" alt="Next.js">
+              <img src="/assets/fastify.svg" alt="Fastify (Framework)">
+              <img src="/assets/websocket.png" alt="Fastify (Framework)">
+            </div>
           </div>
         </div>
       </section>
@@ -452,7 +489,7 @@ export const expireTodos: ScheduledHandler = async (event) => {
         <h2>Roadmap</h2>
         <ul>
           <li>More Users & Contributors 🫣</li>
-          <li>Smarter Services & improved CLI</li>
+          <li>Smarter Services via Inspector</li>
           <li>Microservices & RPC calls</li>
           <li>Queue integrations</li>
           <li>Enhanced AI Tooling</li>
@@ -484,6 +521,7 @@ export const expireTodos: ScheduledHandler = async (event) => {
                 alt="QR Code" /></a>
             <a href="https://forms.gle/APJ1PdWHpUVmmcuB9">Feedback pweez! 🐱</a>
           </div>
+          <small><a href="https://www.flaticon.com/free-icons/json" title="json icons">Icons by yoyonpujiono@Flaticon</a></small>
         </div>
       </section>
 

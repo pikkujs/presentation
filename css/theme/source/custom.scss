@@ -1,6 +1,13 @@
+@use 'sass:color';
+
 :root {
-  --r-comparison-one: red;
-  --r-comparison-two: yellow;
+  --r-comparison-one: rgb(255, 0, 0);
+  --r-comparison-two: rgb(255, 255, 0);
+
+  --vramework-background: black;
+  --vramework-border: white;
+  --vramework-title-text: black;
+  --vramework-text: white;
 }
 
 .comparison {
@@ -85,35 +92,6 @@
   }
 }
 
-.vramework-layer {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  gap: 20px;
-  border: 2px dashed #ccc;
-  padding: 20px;
-  width: 300px;
-  height: 300px;
-
-  .logic-layer {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    border: 2px dashed #ccc;
-    width: 125px;
-    height: 125px;
-    padding: 20px 50px;
-    border-radius: 12px;
-
-    img {
-      width: 50px;
-      height: 50px;
-    }
-  }
-}
-
 .table-icon {
   width: 60px;
   border-radius: 100%;
@@ -128,113 +106,128 @@
   position: relative;
   gap: 5px;
   width: fit-content;
+  margin: auto;
 
-  > * {
+  .layer {
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    border-radius: 5px;
-    border: 1px dashed #ccc;
-    position: relative;
+    gap: 10px;
 
+    border-radius: 5px;
+    position: relative;
+    justify-content: space-around;
+    border: 1px solid var(--vramework-border);
   }
 
-  .function-layer {
+  .top-layer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .functions, .wiring, .services, .function, .service, .cli-layer, .plugin-layer, .function-layer, .core-layer {
+    background-color: var(--vramework-background);
+    border: 1px solid var(--vramework-border);
+
     &::after {
-      content: "Vramework"
-    }
-    padding: 10px 100px;
-    >* {
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      padding: 30px 10px 0px 10px;
-    }
-
-    >*>* {
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      padding: 5px 10px;
-      margin-bottom: 10px;
-    }
-
-    .title {
       position: absolute;
+      border-radius: 0 0 0 5px;
+      padding: 5px;
+      top: 0;
       right: 0;
+      font-size: 10px;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 1px;
+      border-left: 1px;
+      border-style: solid;
+      background-color: var(--vramework-border);
+      border-color: var(--vramework-border);
+      color: var(--vramework-title-text);
+    }
+  }
+  
+  .function-layer {
+    padding: 30px 10px 10px 10px;
+
+    .functions, .services, .wiring {
+      padding: 40px 10px 0 10px;
+      border-radius: 5px;
+
+    }
+
+    .function, .service, .wire {
+      border-radius: 5px;
+      background-color: var(--vramework-background);
+      border: 1px solid var(--vramework-border);
+      padding: 10px 50px 10px 10px;
+      margin-bottom: 10px;
+      position: relative;
+      color: var(--vramework-text);
+      font-size: 20px;
+      text-align: left;
     }
 
     .functions {
       position: relative;
-      height: fit-content;
-
-      .function {
-        position: relative;
-      }
-
       .function::after {
-        content: "function";
-        border-style: solid;
+        content: "Function";
       }
+    }
+
+    .wiring {
+      position: relative;
     }
 
     .services {
       position: relative;
       height: fit-content;
-
-      .service {
-        position: relative;
-      }
+      background-color: var(--vramework-background);
+      border: 1px solid var(--vramework-border);
 
       .service::after {
         content: "Service";
-        border-style: solid;
       }
+    }
+
+    &::after {
+      content: "Your (Typed) Logic";
     }
 
     .functions::after {
       content: "Functions";
-      border-style: solid;
     }
 
     .services::after {
       content: "Services";
-      border-style: solid;
+    }
+
+    .wiring::after {
+      content: "Wiring";
     }
   }
 
   .cli-layer {
-    justify-content: space-around;
+    padding: 0 10px;
     &::after {
-      content: "CLI"
+      content: "npx @vramework/cli (compile time)";
+    }
+  }
+
+  .core-layer {
+    padding: 0 10px;
+    &::after {
+      content: "@vramework/core (runtime)";
     }
   }
 
   .plugin-layer {
-    justify-content: space-around;
-    &::after {
-      content: "Plugins";
-      border-style: solid;
-    }
-  }
+    padding: 0 10px;
+    align-items: center;
 
-  .function-layer::after,
-  .cli-layer::after,
-  .plugin-layer::after,
-  .functions::after,
-  .services::after,
-  .service::after,
-  .function::after {
-    position: absolute;
-    border-radius: 0 0 0 5px;
-    padding: 5px;
-    top: 0;
-    right: 0;
-    font-size: 10px;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 1px;
-    border-left: 1px;
-    border-color: #ccc;
-    border-style: dashed;
+    &::after {
+      content: "Plugins (@vramework/aws, @vramework/express-middleware, @vramework/cloudflare, ...)";
+    }
   }
 
   img {
@@ -243,5 +236,16 @@
     border-radius: 100%;
     padding: 5px;
     background-color: white;
+  }
+
+  .file-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--r-block-margin) 0;
+    font-size: 20px;
+    img {
+      margin: 0;
+    }
   }
 }
