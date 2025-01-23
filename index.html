@@ -64,7 +64,7 @@
           <img class="compare-one compare-icon" data-id="icon-websocket" src="/assets/websocket.png" alt="WebSockets">
 
         </div>
-        <small>* and many more ...</small>
+        <small>* and more added daily...</small>
       </section>
 
       <!-- High-Level Comparison Table -->
@@ -156,38 +156,37 @@
 
       <section data-auto-animate>
         <h2>Common Pain Points</h2>
-        <section data-auto-animate>
-          <h4>Have you heard or thought of any of these before?</h4>
-          <small>Feel free to replace X with Y</small>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“AWS is way too expensive, I wish we could save money by running it on Cloudflare instead”
-          </blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“Why is our docker job processor so under utilised?”</blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“We just landed a huge new client! Just wish they weren't using Azure 😨.”</blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“We want to start offering our cloud product to on-premise / enterprise customers.”</blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“Why are we now doing our database queries directly from React code?”</blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“ARGGGH, what is all this boilerplate code!”</blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“Why is it so hard to deploy our WebSockets via serverless?”</blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“Why is my function startup time so slow!”</blockquote>
-        </section>
-        <section data-auto-animate>
-          <blockquote>“What about the 🌍?”</blockquote>
-        </section>
+        <h4>Have you heard or thought of any of these before?</h4>
+        <small>Feel free to replace X with Y</small>
+      </section>
+
+      <section data-auto-animate>
+        <blockquote>“AWS is way too expensive, I wish we could save money by running it on Cloudflare instead”
+        </blockquote>
+      </section>
+      <section data-auto-animate>
+        <blockquote>“Why is our docker job processor so under utilised?”</blockquote>
+      </section>
+      <section data-auto-animate>
+        <blockquote>“We just landed a huge new client! Just wish they weren't using Azure 😨.”</blockquote>
+      </section>
+      <section data-auto-animate>
+        <blockquote>“We want to start offering our cloud product to on-premise / enterprise customers.”</blockquote>
+      </section>
+      <section data-auto-animate>
+        <blockquote>“Why are we now doing our database queries directly from React code?”</blockquote>
+      </section>
+      <section data-auto-animate>
+        <blockquote>“ARGGGH, what is all this boilerplate code!”</blockquote>
+      </section>
+      <section data-auto-animate>
+        <blockquote>“Why is it so hard to deploy our WebSockets via serverless?”</blockquote>
+      </section>
+      <section data-auto-animate>
+        <blockquote>“Why is my function startup time so slow!”</blockquote>
+      </section>
+      <section data-auto-animate>
+        <blockquote>“What about the 🌍?”</blockquote>
       </section>
 
       <section>
@@ -450,7 +449,7 @@ const createSessionServices: CreateSessionServices&lt;
       <section>
         <h2>Deploying Via Express</h2>
         <p style="font-size:0.9em; margin-bottom:10px;">How would we deploy this via express?</p>
-        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-4|5-7|8-11">import '../.vramework/vramework-bootstrap'
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-4|5-7|8-11">import '../.vramework/vramework-bootstrap.gen'
 // Create Config and Services         
 const config = await getConfig()
 const singletonServices = await createSingletonServices(config)
@@ -468,7 +467,7 @@ app.listen(config.port, config.hostname)
       <section>
         <h2>Deploying Via AWS</h2>
         <p style="font-size:0.9em; margin-bottom:10px;">How would we use this via AWS?</p>
-        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-10|11-15|16-23">import '../.vramework/vramework-bootstrap'
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-10|11-15|16-23">import '../.vramework/vramework-bootstrap.gen'
 // Create Config and Services once on load
 let singletonServices
 const coldStart = async () => {
@@ -506,10 +505,9 @@ export const expireTodos: ScheduledHandler = async (event) => {
         <h3>Vramework is a function repository, not a server!</h3>
         <ul>
           <li>Built primarily to plug into <strong>servers</strong></li>
-          <li>Currently <strong>JSON and primitives</strong> input/output (format support is limited).</li>
-          <li>Not yet fully battle tested in production*</li>
+          <li>Currently <strong>JSON and primitives</strong> input/output.</li>
+          <li>Still it 0.x stage* (due to cli refactor)</li>
         </ul>
-        <small style="margin-top: 30px;">*due to large refactor</small>
       </section>
 
       <!-- Roadmap -->
