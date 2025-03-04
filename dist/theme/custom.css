@@ -1,10 +1,10 @@
 :root {
   --r-comparison-one: rgb(255, 0, 0);
   --r-comparison-two: rgb(255, 255, 0);
-  --vramework-background: black;
-  --vramework-border: white;
-  --vramework-title-text: black;
-  --vramework-text: white;
+  --pikku-background: black;
+  --pikku-border: white;
+  --pikku-title-text: black;
+  --pikku-text: white;
 }
 
 .comparison .comparison-grid {
@@ -77,7 +77,7 @@
   background-size: contain;
 }
 
-.vramework-inner-workings {
+.pikku-inner-workings {
   display: flex;
   flex-direction: column-reverse;
   position: relative;
@@ -85,25 +85,25 @@
   width: fit-content;
   margin: auto;
 }
-.vramework-inner-workings .layer {
+.pikku-inner-workings .layer {
   display: flex;
   flex-direction: row;
   gap: 10px;
   border-radius: 5px;
   position: relative;
   justify-content: space-around;
-  border: 1px solid var(--vramework-border);
+  border: 1px solid var(--pikku-border);
 }
-.vramework-inner-workings .top-layer {
+.pikku-inner-workings .top-layer {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-.vramework-inner-workings .functions, .vramework-inner-workings .wiring, .vramework-inner-workings .services, .vramework-inner-workings .function, .vramework-inner-workings .service, .vramework-inner-workings .cli-layer, .vramework-inner-workings .plugin-layer, .vramework-inner-workings .function-layer, .vramework-inner-workings .core-layer {
-  background-color: var(--vramework-background);
-  border: 1px solid var(--vramework-border);
+.pikku-inner-workings .functions, .pikku-inner-workings .wiring, .pikku-inner-workings .services, .pikku-inner-workings .function, .pikku-inner-workings .service, .pikku-inner-workings .cli-layer, .pikku-inner-workings .plugin-layer, .pikku-inner-workings .function-layer, .pikku-inner-workings .core-layer {
+  background-color: var(--pikku-background);
+  border: 1px solid var(--pikku-border);
 }
-.vramework-inner-workings .functions::after, .vramework-inner-workings .wiring::after, .vramework-inner-workings .services::after, .vramework-inner-workings .function::after, .vramework-inner-workings .service::after, .vramework-inner-workings .cli-layer::after, .vramework-inner-workings .plugin-layer::after, .vramework-inner-workings .function-layer::after, .vramework-inner-workings .core-layer::after {
+.pikku-inner-workings .functions::after, .pikku-inner-workings .wiring::after, .pikku-inner-workings .services::after, .pikku-inner-workings .function::after, .pikku-inner-workings .service::after, .pikku-inner-workings .cli-layer::after, .pikku-inner-workings .plugin-layer::after, .pikku-inner-workings .function-layer::after, .pikku-inner-workings .core-layer::after {
   position: absolute;
   border-radius: 0 0 0 5px;
   padding: 5px;
@@ -115,79 +115,79 @@
   border-bottom: 1px;
   border-left: 1px;
   border-style: solid;
-  background-color: var(--vramework-border);
-  border-color: var(--vramework-border);
-  color: var(--vramework-title-text);
+  background-color: var(--pikku-border);
+  border-color: var(--pikku-border);
+  color: var(--pikku-title-text);
 }
-.vramework-inner-workings .function-layer {
+.pikku-inner-workings .function-layer {
   padding: 20px 100px 10px 10px;
 }
-.vramework-inner-workings .function-layer .functions, .vramework-inner-workings .function-layer .services, .vramework-inner-workings .function-layer .wiring {
+.pikku-inner-workings .function-layer .functions, .pikku-inner-workings .function-layer .services, .pikku-inner-workings .function-layer .wiring {
   padding: 30px 10px 0 10px;
   border-radius: 5px;
 }
-.vramework-inner-workings .function-layer .function, .vramework-inner-workings .function-layer .service, .vramework-inner-workings .function-layer .wire {
+.pikku-inner-workings .function-layer .function, .pikku-inner-workings .function-layer .service, .pikku-inner-workings .function-layer .wire {
   border-radius: 5px;
-  background-color: var(--vramework-background);
-  border: 1px solid var(--vramework-border);
+  background-color: var(--pikku-background);
+  border: 1px solid var(--pikku-border);
   padding: 5px 50px 5px 10px;
   margin-bottom: 10px;
   position: relative;
-  color: var(--vramework-text);
+  color: var(--pikku-text);
   font-size: 20px;
   text-align: left;
 }
-.vramework-inner-workings .function-layer .functions {
+.pikku-inner-workings .function-layer .functions {
   position: relative;
 }
-.vramework-inner-workings .function-layer .wiring {
+.pikku-inner-workings .function-layer .wiring {
   position: relative;
 }
-.vramework-inner-workings .function-layer .services {
+.pikku-inner-workings .function-layer .services {
   position: relative;
   height: fit-content;
-  background-color: var(--vramework-background);
-  border: 1px solid var(--vramework-border);
+  background-color: var(--pikku-background);
+  border: 1px solid var(--pikku-border);
 }
-.vramework-inner-workings .function-layer::after {
+.pikku-inner-workings .function-layer::after {
   content: "Your (Typed) Logic";
 }
-.vramework-inner-workings .function-layer .functions::after {
+.pikku-inner-workings .function-layer .functions::after {
   content: "Functions";
 }
-.vramework-inner-workings .function-layer .services::after {
+.pikku-inner-workings .function-layer .services::after {
   content: "Services";
 }
-.vramework-inner-workings .function-layer .wiring::after {
+.pikku-inner-workings .function-layer .wiring::after {
   content: "Wiring";
 }
-.vramework-inner-workings .cli-layer {
+.pikku-inner-workings .cli-layer {
   padding: 0 10px;
 }
-.vramework-inner-workings .cli-layer::after {
-  content: "npx @vramework/cli (compile time)";
+.pikku-inner-workings .cli-layer::after {
+  content: "npx @pikku/cli (compile time)";
 }
-.vramework-inner-workings .core-layer {
+.pikku-inner-workings .core-layer {
   padding: 0 10px;
 }
-.vramework-inner-workings .core-layer::after {
-  content: "@vramework/core (runtime)";
+.pikku-inner-workings .core-layer::after {
+  content: "@pikku/core (runtime)";
 }
-.vramework-inner-workings .plugin-layer {
+.pikku-inner-workings .plugin-layer {
   padding: 0 10px;
   align-items: center;
 }
-.vramework-inner-workings .plugin-layer::after {
-  content: "Plugins (@vramework/aws, @vramework/express-middleware, @vramework/cloudflare, ...)";
+.pikku-inner-workings .plugin-layer::after {
+  content: "Plugins (@pikku/aws, @pikku/express-middleware, @pikku/cloudflare, ...)";
 }
-.vramework-inner-workings img {
+.pikku-inner-workings img {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   padding: 5px;
   background-color: white;
 }
-.vramework-inner-workings .file-icon {
+.pikku-inner-workings .file-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,6 +195,6 @@
   margin: var(--r-block-margin) 0;
   font-size: 20px;
 }
-.vramework-inner-workings .file-icon img {
+.pikku-inner-workings .file-icon img {
   margin: 0;
 }

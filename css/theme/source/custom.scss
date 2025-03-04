@@ -4,10 +4,10 @@
   --r-comparison-one: rgb(255, 0, 0);
   --r-comparison-two: rgb(255, 255, 0);
 
-  --vramework-background: black;
-  --vramework-border: white;
-  --vramework-title-text: black;
-  --vramework-text: white;
+  --pikku-background: black;
+  --pikku-border: white;
+  --pikku-title-text: black;
+  --pikku-text: white;
 }
 
 .comparison {
@@ -100,7 +100,7 @@
   background-size: contain;
 }
 
-.vramework-inner-workings {
+.pikku-inner-workings {
   display: flex;
   flex-direction: column-reverse;
   position: relative;
@@ -116,7 +116,7 @@
     border-radius: 5px;
     position: relative;
     justify-content: space-around;
-    border: 1px solid var(--vramework-border);
+    border: 1px solid var(--pikku-border);
   }
 
   .top-layer {
@@ -126,8 +126,8 @@
   }
 
   .functions, .wiring, .services, .function, .service, .cli-layer, .plugin-layer, .function-layer, .core-layer {
-    background-color: var(--vramework-background);
-    border: 1px solid var(--vramework-border);
+    background-color: var(--pikku-background);
+    border: 1px solid var(--pikku-border);
 
     &::after {
       position: absolute;
@@ -141,9 +141,9 @@
       border-bottom: 1px;
       border-left: 1px;
       border-style: solid;
-      background-color: var(--vramework-border);
-      border-color: var(--vramework-border);
-      color: var(--vramework-title-text);
+      background-color: var(--pikku-border);
+      border-color: var(--pikku-border);
+      color: var(--pikku-title-text);
     }
   }
   
@@ -158,12 +158,12 @@
 
     .function, .service, .wire {
       border-radius: 5px;
-      background-color: var(--vramework-background);
-      border: 1px solid var(--vramework-border);
+      background-color: var(--pikku-background);
+      border: 1px solid var(--pikku-border);
       padding: 5px 50px 5px 10px;
       margin-bottom: 10px;
       position: relative;
-      color: var(--vramework-text);
+      color: var(--pikku-text);
       font-size: 20px;
       text-align: left;
     }
@@ -181,8 +181,8 @@
     .services {
       position: relative;
       height: fit-content;
-      background-color: var(--vramework-background);
-      border: 1px solid var(--vramework-border);
+      background-color: var(--pikku-background);
+      border: 1px solid var(--pikku-border);
 
       .service::after {
       }
@@ -208,14 +208,14 @@
   .cli-layer {
     padding: 0 10px;
     &::after {
-      content: "npx @vramework/cli (compile time)";
+      content: "npx @pikku/cli (compile time)";
     }
   }
 
   .core-layer {
     padding: 0 10px;
     &::after {
-      content: "@vramework/core (runtime)";
+      content: "@pikku/core (runtime)";
     }
   }
 
@@ -224,7 +224,7 @@
     align-items: center;
 
     &::after {
-      content: "Plugins (@vramework/aws, @vramework/express-middleware, @vramework/cloudflare, ...)";
+      content: "Plugins (@pikku/aws, @pikku/express-middleware, @pikku/cloudflare, ...)";
     }
   }
 

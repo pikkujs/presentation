@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Vramework.dev</title>
-  <meta name="description" content="An introduction to Vramework.dev">
+  <title>Pikku.dev</title>
+  <meta name="description" content="An introduction to Pikku.dev">
   <meta name="author" content="Yasser Fadl">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,11 +25,11 @@
 
       <!-- Title Slide -->
       <section>
-        <a href="https://vramework.dev">
-          <img src="https://vramework.dev/img/vramework.png" alt="Vramework.dev logo"
+        <a href="https://pikku.dev">
+          <img src="https://pikku.dev/img/pikku.png" alt="Pikku.dev logo"
             style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
         </a>
-        <h2 style="margin-bottom: 0;">Vramework</h2>
+        <h2 style="margin-bottom: 0;">Pikku</h2>
         <h3>The Framework to Unite Them All</h3>
         <p><small>Created by <a href="http://github.com/yasserf">Yasser Fadl</a></small></p>
       </section>
@@ -194,16 +194,16 @@
         <h1>Costs and Lock-in</h1>
       </section>
 
-      <!-- Introduce Typed Functions / Vramework -->
+      <!-- Introduce Typed Functions / Pikku -->
       <section>
         <h2>My Solution Is...</h2>
-        <h1 class="fragment">Typed Functions!</h1>
-        <h3 class="fragment">a.k.a. Vramework</h3>
+        <h1 class="fragment">Pikku!</h1>
+        <h3 class="fragment">a.k.a. Typed Functions</h3>
       </section>
 
-      <!-- Why Typed Functions / Vramework? -->
+      <!-- Why Typed Functions / Pikku? -->
       <section>
-        <h2>Why Typed Functions?</h2>
+        <h2>Why Pikku?</h2>
         <ol>
           <li>🧩 Modular (Functions are individual units)</li>
           <li>🧳 Portable (AWS, Cloudflare, Express, ...)</li>
@@ -233,9 +233,9 @@
         <p>It's a developer framework after all! Let’s see some examples.</p>
       </section>
 
-      <!-- A Vramework Function -->
+      <!-- A Pikku Function -->
       <section>
-        <h2>A Vramework Function</h2>
+        <h2>A Pikku Function</h2>
         <p style="font-size:0.9em; margin-bottom:10px;">
           Typed inputs & outputs ensure type-safety and fewer runtime errors.
         </p>
@@ -303,14 +303,14 @@ addScheduledTask({
 
       <!-- Services Example -->
       <section>
-        <h2>Services in Vramework</h2>
+        <h2>Services in Pikku</h2>
         <p style="font-size:0.9em; margin-bottom:10px;">Define singleton and session-based services</p>
         <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1-16|18-27">const createSingletonServices: CreateSingletonServices&lt;
   Config,
   SingletonServices
 &gt; = async (config) => {
   const jwt = new JoseJWTService&lt;UserSession&gt;(getJWTKeys, logger)
-  const httpSessionService = new VrameworkHTTPSessionService&lt;UserSession&gt;(jwt, {
+  const httpSessionService = new PikkuHTTPSessionService&lt;UserSession&gt;(jwt, {
     cookieNames: ['session'],
     getSessionForCookieValue: async (cookieValue: string) => {
       return await jwt.decodeSession(cookieValue)
@@ -336,13 +336,13 @@ const createSessionServices: CreateSessionServices&lt;
       </section>
 
 
-      <!-- How Vramework Works (TypeScript compiler) -->
+      <!-- How Pikku Works (TypeScript compiler) -->
       <section>
         <h2>How It Works Under the Hood</h2>
         <p style="font-size:0.95em;">
           <strong>By leveraging the TypeScript compiler</strong>
         </p>
-        <div class="layer vramework-inner-workings">
+        <div class="layer pikku-inner-workings">
           <div class="fragment layer function-layer">
             <div class="services">
               <div class="service">talk</div>
@@ -433,32 +433,32 @@ const createSessionServices: CreateSessionServices&lt;
       <!-- Services Example -->
       <section>
         <h2>The CLI</h2>
-        <p style="font-size:0.9em; margin-bottom:10px;">npx @vramework/cli</p>
+        <p style="font-size:0.9em; margin-bottom:10px;">npx @pikku/cli</p>
         <pre><code class="json" style="font-size: 16px;">{
   // The project config file
   "tsconfig": "./tsconfig.json",
   // Where inspector should look for functions & services
   "routeDirectories": ["packages/functions/src"],
   // Where all the generated files go
-  "outDir": "packages/functions/.vramework"
+  "outDir": "packages/functions/.pikku"
 }</code></pre>
-        <small>vramework.config.json</small>
+        <small>pikku.config.json</small>
       </section>
 
       <!-- Services Example -->
       <section>
         <h2>Deploying Via Express</h2>
         <p style="font-size:0.9em; margin-bottom:10px;">How would we deploy this via express?</p>
-        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-4|5-7|8-11">import '../.vramework/vramework-bootstrap.gen'
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-4|5-7|8-11">import '../.pikku/pikku-bootstrap.gen'
 // Create Config and Services         
 const config = await getConfig()
 const singletonServices = await createSingletonServices(config)
 // Create a scheduler for CronJobs
-const scheduler = new VrameworkTaskScheduler(singletonServices)
+const scheduler = new PikkuTaskScheduler(singletonServices)
 scheduler.startAll()
 // Create an Express app
 const app = new Express()
-app.use(vrameworkMiddleware(this.singletonServices, createSessionServices))
+app.use(pikkuMiddleware(this.singletonServices, createSessionServices))
 app.listen(config.port, config.hostname)
             </code></pre>
       </section>
@@ -467,7 +467,7 @@ app.listen(config.port, config.hostname)
       <section>
         <h2>Deploying Via AWS</h2>
         <p style="font-size:0.9em; margin-bottom:10px;">How would we use this via AWS?</p>
-        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-10|11-15|16-23">import '../.vramework/vramework-bootstrap.gen'
+        <pre><code class="javascript" style="font-size: 16px;" data-line-numbers="|1|2-10|11-15|16-23">import '../.pikku/pikku-bootstrap.gen'
 // Create Config and Services once on load
 let singletonServices
 const coldStart = async () => {
@@ -496,13 +496,13 @@ export const expireTodos: ScheduledHandler = async (event) => {
       <!-- Demo Slide -->
       <section>
         <h2>Demo Time 🚀</h2>
-        <p>(Quick demonstration of Vramework in action.)</p>
+        <p>(Quick demonstration of Pikku in action.)</p>
       </section>
 
       <!-- New Caveats Slide -->
       <section>
         <h2>Limitations & Caveats</h2>
-        <h3>Vramework is a function repository, not a server!</h3>
+        <h3>Pikku is a function repository, not a server!</h3>
         <ul>
           <li>Built primarily to plug into <strong>servers</strong></li>
           <li>Currently <strong>JSON and primitives</strong> input/output.</li>
@@ -525,7 +525,7 @@ export const expireTodos: ScheduledHandler = async (event) => {
       <!-- Recap Slide -->
       <section>
         <h4>In summary...</h4>
-        <h3>Vramework = Typed Functions + Minimal Overhead</h3>
+        <h3>Pikku = Typed Functions + Minimal Overhead</h3>
         <ul class="fragment">
           <li>Leverages TS Compiler to remove almost all boilerplate</li>
           <li>Handles HTTP, Cron, Auth, and more</li>
@@ -551,13 +551,13 @@ export const expireTodos: ScheduledHandler = async (event) => {
             </div>
           </div>
           <div style="display: flex; flex-direction: row; gap: 20px; font-size: 30px;">
-            <a href="https://vramework.dev">
-              <img src="https://vramework.dev/img/vramework.png" alt="Vramework.dev logo"
+            <a href="https://pikku.dev">
+              <img src="https://pikku.dev/img/pikku.png" alt="Pikku.dev logo"
                 style="height: 90px; margin: 0 auto 4rem auto; background: transparent;">
             </a>
             <div>
-              <a href="https://vramework.dev">https://vramework.dev</a>
-              <div href="https://github.com/vramework/vramework">Github + ⭐️ = 🎉</div>
+              <a href="https://pikku.dev">https://pikku.dev</a>
+              <div href="https://github.com/pikku/pikku">Github + ⭐️ = 🎉</div>
             </div>
           </div>
         </div>
@@ -571,7 +571,7 @@ export const expireTodos: ScheduledHandler = async (event) => {
       <section>
         <h2>Bonus: WebSockets 👀</h2>
         <p style="font-size:0.9em; margin-bottom:10px;">
-          Sneak peek at how Vramework handles real-time communication without the usual serverless headaches:
+          Sneak peek at how Pikku handles real-time communication without the usual serverless headaches:
         </p>
         <pre><code class="javascript" style="font-size:16px;" data-line-numbers="|1-3|5-7|9-11|13-20|26-28|29-39">const onConnect: ChannelConnection&lt;'hello!'> = async (services, channel) => {
   // On connection (like onOpen)
